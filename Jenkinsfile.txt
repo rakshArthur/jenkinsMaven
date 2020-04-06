@@ -24,7 +24,7 @@ pipeline {
 				archive 'target/*.jar'
             }
         }
-		stage() {
+		stage('Sending Email') {
 			steps {
 				input("Do you wish to send email?")
 				mail bcc: '', body: 'Sample Body', cc: '', from: '', replyTo: '', subject: 'Sample Suject', to: 'raksh.0804@gmail.com'
